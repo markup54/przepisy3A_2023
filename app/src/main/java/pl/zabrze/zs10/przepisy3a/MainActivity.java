@@ -2,6 +2,7 @@ package pl.zabrze.zs10.przepisy3a;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -27,6 +28,7 @@ private Spinner spinnerKategorie;
                                 "Kliknięto "+Integer.toString(i)+" Kategoria: "+kategoria,
                                 Toast.LENGTH_SHORT)
                                 .show();
+                        wyswietlNowaAktywnosc(kategoria,i);
                     }
                 }
         );
@@ -40,6 +42,7 @@ private Spinner spinnerKategorie;
                                         "Kliknięto "+Integer.toString(i)+" Kategoria: "+kategoria,
                                         Toast.LENGTH_SHORT)
                                 .show();
+                        //wyswietlNowaAktywnosc(kategoria,i);
                     }
 
                     @Override
@@ -49,5 +52,13 @@ private Spinner spinnerKategorie;
                     }
                 }
         );
+
+    }
+    private void wyswietlNowaAktywnosc(String kategoria,int numer){
+        //notatka o intencjach jawnych
+        Intent intent = new Intent(MainActivity.this, ListaPrzepisowActivity.class);
+        intent.putExtra("KATEGORIA",kategoria);
+        intent.putExtra("NR",numer);
+        startActivity(intent);
     }
 }
