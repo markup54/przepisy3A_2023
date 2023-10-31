@@ -6,6 +6,8 @@ public class Przepis {
     private int idObrazka;
     private String skladniki;
     private String tresc;
+    private int id;
+    private static int ile =0 ;
 
     public Przepis(String nazwa,
                    String kategoria,
@@ -17,6 +19,13 @@ public class Przepis {
         this.idObrazka = idObrazka;
         this.skladniki = skladniki;
         this.tresc = tresc;
+        id=ile;
+        ile++;
+
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override

@@ -9,6 +9,10 @@ public class RepozytoriumPrzepisow {
         wstawPrzepisy();
     }
 
+    public ArrayList<Przepis> getPrzepisy() {
+        return przepisy;
+    }
+
     public  ArrayList<Przepis> wstawPrzepisy(){
         przepisy.add(new Przepis(
                 "kakao",
