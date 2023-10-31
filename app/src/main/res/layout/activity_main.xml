@@ -24,8 +24,8 @@
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-<com.google.android.material.divider.MaterialDivider
-    android:layout_width="match_parent"
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
     android:layout_height="4dp"
     app:dividerColor="@color/black"
     app:layout_constraintStart_toStartOf="parent"
