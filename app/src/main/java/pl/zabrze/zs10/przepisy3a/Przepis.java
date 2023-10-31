@@ -19,7 +19,10 @@ public class Przepis {
         this.tresc = tresc;
     }
 
-
+    @Override
+    public String toString() {
+        return  nazwa ;
+    }
 
     public String getNazwa() {
         return nazwa;
