@@ -30,5 +30,24 @@ private Spinner spinnerKategorie;
                     }
                 }
         );
+        spinnerKategorie = findViewById(R.id.spinner);
+        spinnerKategorie.setOnItemSelectedListener(
+                new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        String kategoria = listViewKategorie.getItemAtPosition(i).toString();
+                        Toast.makeText(MainActivity.this,
+                                        "Kliknięto "+Integer.toString(i)+" Kategoria: "+kategoria,
+                                        Toast.LENGTH_SHORT)
+                                .show();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        Toast.makeText(MainActivity.this, "Wybierz kategorię", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                }
+        );
     }
 }
